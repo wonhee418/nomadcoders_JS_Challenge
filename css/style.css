@@ -1,0 +1,254 @@
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+img {
+  object-fit: cover;
+  /* width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1; */
+}
+
+.boxDesign {
+  padding: 20rem;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: rgb(102 96 173 / 14%) 1px 1px 15px 5px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.inner {
+  padding: 100rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.board {
+  height: calc(100vh - 200rem);
+  padding: 30rem;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.board .left {
+  flex: 1;
+}
+.board .middle {
+  flex: 3;
+}
+.board .right {
+  flex: 1;
+}
+
+.section {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 30rem;
+}
+
+.section:last-child {
+  margin-right: 0;
+}
+
+/* left 영역 */
+.toDoBox {
+  display: inline-block;
+  height: calc(100vh - 390rem);
+
+  width: 350rem;
+  margin-top: 30rem;
+}
+
+.toDoBox input {
+  font-size: 16rem;
+  width: 100%;
+  border-bottom: 1px solid #666;
+  padding: 5rem;
+}
+
+.toDoBox #todo-list {
+  margin-top: 14rem;
+  font-size: 16rem;
+  height: calc(100vh - 474rem);
+  overflow-y: auto;
+}
+.toDoBox #todo-list li {
+  border-radius: 5px;
+  min-height: 50rem;
+  margin-bottom: 10rem;
+  position: relative;
+  padding: 20rem;
+  background: rgb(249, 249, 249);
+}
+/* .toDoBox #todo-list li::before {
+  content: "";
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  background: #222;
+  position: absolute;
+  left: 10rem;
+  top: 25rem;
+} */
+
+.toDoBox #todo-list span {
+  font-size: 14em;
+  line-height: 1.1;
+}
+
+.toDoBox #todo-list button {
+  background: none;
+  cursor: pointer;
+  color: red;
+  position: absolute;
+  right: 5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+
+#clock {
+  width: 350rem;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 60rem;
+}
+
+/* left 영역 끝 */
+
+/* middle 영역 */
+
+#greeting {
+  font-size: 30rem;
+  font-weight: bold;
+}
+
+input {
+  border: 0;
+  padding: 10rem;
+  background: none;
+  border-bottom: 2px solid #fff;
+  outline: none;
+}
+
+input::placeholder {
+  color: #666;
+}
+
+#quote {
+}
+
+/* middle 영역 종료 */
+
+/* right 영역 */
+
+#weather {
+  width: 350rem;
+  border-radius: 10px;
+  text-align: right;
+}
+#weather p {
+  font-size: 16rem;
+}
+#weather .tit {
+  text-align: left;
+  font-weight: bold;
+}
+
+/* music 영역 */
+
+.music {
+  width: 350rem;
+  margin-top: 30rem;
+  padding: 30rem;
+}
+
+.music .thum img {
+  border-radius: 10px;
+}
+
+.music .musicDesc {
+  display: inline-block;
+  margin-top: 16rem;
+}
+
+.music .musicDesc p {
+  font-size: 16rem;
+}
+.music .musicDesc p:first-child {
+  margin-bottom: 8rem;
+}
+
+.music .musicDesc p:last-child {
+  font-weight: bold;
+}
+
+.music .musicProgressBox {
+  border-radius: 10rem;
+  border: 1px solid #999;
+  width: 100%;
+  height: 6rem;
+  display: block;
+  margin-top: 10rem;
+}
+
+.music .musicProgressBar {
+  background: #333;
+  border-radius: 6rem;
+  height: 5rem;
+  display: block;
+}
+
+.music .musicTime {
+  margin-top: 6rem;
+}
+
+.music .musicTime span {
+  font-size: 14rem;
+}
+.music .musicTime span:last-child {
+  float: right;
+}
+
+.music i {
+  display: inline-block;
+}
+.music .btnWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.music .btnWrap span {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 16rem;
+}
+
+.music .btnWrap span svg {
+  width: 30rem;
+  height: 30rem;
+}
+
+/* music 영역 종료 */
+
+/* right 영역 끝 */
+
+.modeBtn {
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: rgb(102 96 173 / 14%) 1px 1px 15px 5px;
+  position: fixed;
+  width: 50rem;
+  height: 50rem;
+  right: 30rem;
+  bottom: 30rem;
+  background-image: url(/img/dark.png);
+  background-size: cover;
+  cursor: pointer;
+}
