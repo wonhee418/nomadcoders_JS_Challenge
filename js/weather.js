@@ -10,8 +10,14 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      // console.log(data.weather[0].icon);
+      // console.log(data);
       const weather = document.querySelector("#weather .temp");
       const city = document.querySelector("#weather .city");
+      const icon = document.querySelector("#weather .icon");
+      const iconImg = document.createElement("img");
+      iconImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+      icon.appendChild(iconImg);
       city.innerText = data.name;
       weather.innerText = `${data.weather[0].main} / ${Math.round(
         data.main.temp

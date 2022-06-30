@@ -13,6 +13,11 @@ img {
   z-index: -1; */
 }
 
+.tit {
+  font-weight: bold;
+  font-size: 16rem;
+}
+
 .boxDesign {
   padding: 20rem;
   background: rgba(255, 255, 255, 1);
@@ -63,16 +68,21 @@ img {
 .toDoBox {
   display: inline-block;
   height: calc(100vh - 390rem);
-
   width: 350rem;
   margin-top: 30rem;
 }
 
 .toDoBox input {
+  border: none;
+  border-bottom: 1px solid #d7dae2;
+  border-radius: 15px;
+  margin: 15px 0px 0px 0px;
+  color: rgba(0, 0, 0, 0.7);
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 15%);
+  transition: all 0.3s ease-in-out;
   font-size: 16rem;
   width: 100%;
-  border-bottom: 1px solid #666;
-  padding: 20rem;
+  padding: 15rem;
 }
 
 .toDoBox #todo-list {
@@ -89,6 +99,7 @@ img {
   padding: 20rem;
   background: rgb(249, 249, 249);
   transition-duration: 0.1s;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 15%);
 }
 /* .toDoBox #todo-list li::before {
   content: "";
@@ -163,6 +174,12 @@ input::placeholder {
 #weather .tit {
   text-align: left;
   font-weight: bold;
+}
+
+#weather .weatherWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* music 영역 */
