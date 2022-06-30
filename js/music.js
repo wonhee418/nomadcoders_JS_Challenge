@@ -36,7 +36,6 @@ function musicPlay(e) {
 
 function musicStop() {
   audio.pause();
-  startClock();
 }
 
 function nextMusic() {
@@ -80,33 +79,32 @@ function progressBar() {
     2,
     "0"
   ); //  get seconds
-  duration.innerText = `${minutes} : ${seconds}`;
-  currentTime();
+  // duration.innerText = `${minutes} : ${seconds}`;
+  // currentTime();
 }
 
-function currentTime() {
-  const currentTime = document.querySelector(".musicTime span:first-child");
-  time++;
-  let hour = parseInt(String(time / (60 * 60)));
-  let min = parseInt(String((time - hour * 60 * 60) / 60));
-  let sec = time % 60;
-  console.log(sec);
-  currentTime.innerText = `${String(min).padStart(2, "0")} : ${String(
-    sec
-  ).padStart(2, "0")}`;
-}
+// function currentTime() {
+//   const currentTime = document.querySelector(".musicTime span:first-child");
+//   time++;
+//   let hour = parseInt(String(time / (60 * 60)));
+//   let min = parseInt(String((time - hour * 60 * 60) / 60));
+//   let sec = time % 60;
+//   console.log(sec);
+//   currentTime.innerText = `${String(min).padStart(2, "0")} : ${String(
+//     sec
+//   ).padStart(2, "0")}`;
+// }
 
-//시계 시작 - 재귀호출로 반복실행
-function startClock() {
-  progressBar();
-  stopClock();
-  timerId = setTimeout(startClock, 1000);
-}
+// //시계 시작 - 재귀호출로 반복실행
+// function startClock() {
+//   progressBar();
+//   musicStop();
+//   timerId = setTimeout(startClock, 1000);
+// }
 
 playBtn.addEventListener("click", musicPlay);
 pauseBtn.addEventListener("click", musicStop);
 preBtn.addEventListener("click", prevMusic);
 nextBtn.addEventListener("click", nextMusic);
 audio.addEventListener("ended", nextMusic);
-console.log(parseInt(audio.currentTime));
 setInterval(progressBar, 1000);

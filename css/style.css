@@ -1,4 +1,5 @@
 body {
+  transition-duration: 0.1s;
   background-color: rgb(245, 245, 245);
 }
 
@@ -17,6 +18,7 @@ img {
   background: rgba(255, 255, 255, 1);
   box-shadow: rgb(102 96 173 / 14%) 1px 1px 15px 5px;
   border-radius: 10px;
+  transition-duration: 0.1s;
 }
 
 .hidden {
@@ -70,13 +72,13 @@ img {
   font-size: 16rem;
   width: 100%;
   border-bottom: 1px solid #666;
-  padding: 5rem;
+  padding: 20rem;
 }
 
 .toDoBox #todo-list {
   margin-top: 14rem;
   font-size: 16rem;
-  height: calc(100vh - 474rem);
+  height: calc(100vh - 506rem);
   overflow-y: auto;
 }
 .toDoBox #todo-list li {
@@ -86,6 +88,7 @@ img {
   position: relative;
   padding: 20rem;
   background: rgb(249, 249, 249);
+  transition-duration: 0.1s;
 }
 /* .toDoBox #todo-list li::before {
   content: "";
@@ -171,6 +174,7 @@ input::placeholder {
 }
 
 .music .thum img {
+  width: 290rem;
   border-radius: 10px;
 }
 
@@ -251,4 +255,64 @@ input::placeholder {
   background-image: url(/img/dark.png);
   background-size: cover;
   cursor: pointer;
+}
+
+/* 다크모드 */
+
+body.dark {
+  background-color: #0c0c0c;
+  color: #fff;
+}
+
+.dark div.board {
+  background: rgb(25, 25, 25);
+}
+
+.dark .modeBtn {
+  background-image: url(/img/light.png);
+}
+
+.dark .boxDesign {
+  background-color: #252525;
+  box-shadow: none;
+}
+
+.dark .toDoBox #todo-list li {
+  background: rgb(25, 25, 25);
+}
+
+.dark .music .musicProgressBar {
+  background: #fff;
+}
+
+.dark .music .btnWrap span svg {
+  fill: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0c0c0c;
+    color: #fff;
+  }
+
+  div.board {
+    background: rgb(25, 25, 25);
+  }
+
+  .boxDesign {
+    background-color: #252525;
+    box-shadow: none;
+  }
+
+  .toDoBox #todo-list li {
+    background: rgb(25, 25, 25);
+  }
+
+  .music .musicProgressBar {
+    background: #fff;
+  }
+
+  .music .btnWrap span svg {
+    fill: #fff;
+  }
 }
