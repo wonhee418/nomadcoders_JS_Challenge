@@ -15,7 +15,7 @@ const musicThumArr = ["thum01.jpg", "thum02.jpg", "thum03.jpg"];
 // 음악 영역 초기셋팅
 let i = 0;
 const musicTotal = musicArr.length - 1;
-const audio = new Audio(`../mp4/${musicArr[i]}`);
+const audio = new Audio(`mp4/${musicArr[i]}`);
 audio.autoplay = true;
 handleMusicDesc();
 
@@ -24,7 +24,7 @@ let time = 0;
 let timerId;
 
 function handleMusicDesc() {
-  musicThum.src = `../img/${musicThumArr[i]}`;
+  musicThum.src = `img/${musicThumArr[i]}`;
   musicArtist.innerText = `${musicArtistArr[i]}`;
   musicName.innerText = `${musicNameArr[i]}`;
 }
@@ -45,7 +45,7 @@ function nextMusic() {
   } else {
     i = 0;
   }
-  audio.src = `../mp4/${musicArr[i]}`;
+  audio.src = `mp4/${musicArr[i]}`;
   handleMusicDesc();
   audio.play();
 }
@@ -57,7 +57,7 @@ function prevMusic() {
   } else {
     i--;
   }
-  audio.src = `../mp4/${musicArr[i]}`;
+  audio.src = `mp4/${musicArr[i]}`;
   handleMusicDesc();
   audio.play();
 }
@@ -71,36 +71,17 @@ function progressBar() {
   currentTimeBar = currentTimeBar.toFixed(2);
   progressbar.style.width = `${currentTimeBar}%`;
 
-  let hours = Math.floor(musicDuration / 3600); // get hours
-  let minutes = String(
-    Math.floor((musicDuration - hours * 3600) / 60)
-  ).padStart(2, "0"); // get minutes
-  let seconds = String(musicDuration - hours * 3600 - minutes * 60).padStart(
-    2,
-    "0"
-  ); //  get seconds
-  // duration.innerText = `${minutes} : ${seconds}`;
-  // currentTime();
+  // let hours = Math.floor(musicDuration / 3600); // get hours
+  // let minutes = String(
+  //   Math.floor((musicDuration - hours * 3600) / 60)
+  // ).padStart(2, "0"); // get minutes
+  // let seconds = String(musicDuration - hours * 3600 - minutes * 60).padStart(
+  //   2,
+  //   "0"
+  // ); //  get seconds
+  // // duration.innerText = `${minutes} : ${seconds}`;
+  // // currentTime();
 }
-
-// function currentTime() {
-//   const currentTime = document.querySelector(".musicTime span:first-child");
-//   time++;
-//   let hour = parseInt(String(time / (60 * 60)));
-//   let min = parseInt(String((time - hour * 60 * 60) / 60));
-//   let sec = time % 60;
-//   console.log(sec);
-//   currentTime.innerText = `${String(min).padStart(2, "0")} : ${String(
-//     sec
-//   ).padStart(2, "0")}`;
-// }
-
-// //시계 시작 - 재귀호출로 반복실행
-// function startClock() {
-//   progressBar();
-//   musicStop();
-//   timerId = setTimeout(startClock, 1000);
-// }
 
 playBtn.addEventListener("click", musicPlay);
 pauseBtn.addEventListener("click", musicStop);
