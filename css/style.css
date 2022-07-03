@@ -351,6 +351,10 @@ body.dark {
   color: #fff;
 }
 
+.dark input {
+  color: #fff;
+}
+
 .dark div.board {
   background: rgb(25, 25, 25);
 }
