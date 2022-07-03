@@ -51,3 +51,18 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
+
+// function toDoCheck() {
+//   console.log(savedToDos.length);
+//   if (savedToDos.length <= 2) {
+//     console.log("tttt");
+//     const toDoBox = document.querySelector(".toDoBox");
+//     const span = document.createElement("span");
+//     toDoBox.appendChild(span);
+//     span.innerText = "List를 입력하세요 😊";
+//   } else {
+//     const toDoBox = document.querySelector(".toDoBox");
+//     const span = document.createElement("span");
+//     span.remove();
+//   }
+// }

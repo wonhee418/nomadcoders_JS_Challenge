@@ -1,4 +1,4 @@
-const loginForm = document.querySelector("#login-form");
+const loginForm = document.querySelector(".loginArea");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
@@ -14,7 +14,7 @@ function onLoginSubmit(e) {
 }
 
 function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
+  greeting.innerText = `Hello, ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
 
