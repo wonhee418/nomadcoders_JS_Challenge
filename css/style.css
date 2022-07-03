@@ -339,7 +339,7 @@ input::placeholder {
   height: 50rem;
   right: 30rem;
   bottom: 30rem;
-  background-image: url(/img/dark.png);
+  background-image: url(../img/dark.png);
   background-size: cover;
   cursor: pointer;
 }
@@ -356,12 +356,17 @@ body.dark {
 }
 
 .dark .modeBtn {
-  background-image: url(/img/light.png);
+  background-image: url(../img/light.png);
 }
 
 .dark .boxDesign {
   background-color: #252525;
   box-shadow: none;
+}
+
+.dark .toDoBox input {
+  background: rgb(25, 25, 25);
+  border-bottom: 1px solid #0c0c0c;
 }
 
 .dark .toDoBox #todo-list li {
@@ -375,8 +380,11 @@ body.dark {
 .dark .music .btnWrap span svg {
   fill: #fff;
 }
+.dark .calender {
+  background: rgb(25, 25, 25);
+}
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #0c0c0c;
     color: #fff;
@@ -402,4 +410,4 @@ body.dark {
   .music .btnWrap span svg {
     fill: #fff;
   }
-}
+} */
