@@ -16,7 +16,6 @@ const musicThumArr = ["thum01.jpg", "thum02.jpg", "thum03.jpg"];
 let i = 0;
 const musicTotal = musicArr.length - 1;
 const audio = new Audio(`mp4/${musicArr[i]}`);
-audio.autoplay = true;
 handleMusicDesc();
 
 // 타임체크
