@@ -1,11 +1,14 @@
 # nomadcoders_JS_Challenge
 
+
+
 </br>
 
 # ⭐️ 프로젝트 소개
 노마드코더의 "바닐라 JS로 크롬 앱 만들기" 를 수강후 해당 강의내용을 활용한 **바닐라JS 미니 프로젝트입니다.**
 대시보드형태의 페이지로 **반응형**으로 제작되었으며, To Do List를 중점으로 만든 프로젝트입니다. 사용한 기술은 **배열, 객체, localStorage, fetch(오픈 API) 입니다.
-
+</br>
+[프로젝트 체험하기](https://wonhee418.github.io/nomadcoders_JS_Challenge/)
 </br>
 
 # 💻 프로젝트 구현내용
