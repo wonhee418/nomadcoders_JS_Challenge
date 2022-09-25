@@ -15,6 +15,7 @@
 <ul>
 <li>LocalStorage를 이용하여 로그인 및 다크모드,라이트모드 설정, to-do list 구현</li>
 <li>canvas API를 이용하여 그림판 기능 구현</li>
+<li>canvas에 그린 그림 이미지파일 저장 기능 구현</li>
 <li>fetch를 이용하여 날씨 API(OpenWeatherMap API)를 호출해 현재 위치, 날씨, 기온 구현</li>
 <li>setInterval을 이용하여 현재 시간 구현</li>
 <li>랜덤 함수를 이용하여 새로고침 시, 명언 내용 변경</li>
